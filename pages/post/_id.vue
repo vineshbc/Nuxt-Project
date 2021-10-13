@@ -15,6 +15,22 @@ export default {
   head() {
     return {
       title: this.postData.title,
+      meta: [
+        {
+          hid: "twitter:title",
+          property: "twitter:title",
+          content: this.postData.title,
+        },
+        {
+          hid: "twitter:card",
+          property: "twitter:card",
+        },
+        {
+          hid: "twitter:image",
+          property: "twitter:image",
+          content: this.postData.thumbnailUrl,
+        },
+      ],
     };
   },
   data() {
