@@ -16,18 +16,27 @@ export default {
     return {
       title: this.postData.title,
       meta: [
+        { name: "twitter:site", content: "@random" },
+        { name: "twitter:card", content: "summary_large_image" },
+        {
+          hid: "twitter:url",
+          name: "twitter:url",
+          content: "https://nuxt-sample-app.netlify.app",
+        },
         {
           hid: "twitter:title",
-          property: "twitter:title",
+          name: "twitter:title",
           content: this.postData.title,
         },
         {
-          hid: "twitter:card",
-          property: "twitter:card",
+          hid: "twitter:description",
+          name: "twitter:description",
+          content:
+            "Articles focused on the beautiful art of landscape painting.",
         },
         {
           hid: "twitter:image",
-          property: "twitter:image",
+          name: "twitter:image",
           content: this.postData.thumbnailUrl,
         },
       ],
